@@ -38,52 +38,52 @@ $ErrorActionPreference = "Stop"
 # Version file locations (relative to script root)
 $VersionFiles = @(
     @{
-        Path        = "Unity-Package/Assets/root/package.json"
+        Path        = "unity-shaderworks/Assets/root/package.json"
         Pattern     = '"version":\s*"[\d\.]+"'
         Replace     = '"version": "{VERSION}"'
         Description = "Unity package version"
     },
     @{
-        Path        = "Installer/Assets/YOUR_PACKAGE_NAME_INSTALLER/Installer.cs"
+        Path        = "Installer/Assets/ShaderWorks Installer/Installer.cs"
         Pattern     = 'public const string Version = "[\d\.]+";'
         Replace     = 'public const string Version = "{VERSION}";'
         Description = "Installer C# version constant"
     },
     @{
-        Path        = "Unity-Package/Assets/root/README.md"
-        Pattern     = "https://github\.com/YOUR_GITHUB_USERNAME_REPOSITORY/releases/download/[\d\.]+/YOUR_PACKAGE_NAME_INSTALLER_FILE\.unitypackage"
-        Replace     = "https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY/releases/download/{VERSION}/YOUR_PACKAGE_NAME_INSTALLER_FILE.unitypackage"
+        Path        = "unity-shaderworks/Assets/root/README.md"
+        Pattern     = "https://github\.com/Saesentsessis/unity-shaderworks/releases/download/[\d\.]+/ShaderWorks-Installer\.unitypackage"
+        Replace     = "https://github.com/Saesentsessis/unity-shaderworks/releases/download/{VERSION}/ShaderWorks-Installer.unitypackage"
         Description = "Package README download URL"
     },
     @{
         Path        = "README.md"
-        Pattern     = "https://github\.com/YOUR_GITHUB_USERNAME_REPOSITORY/releases/download/[\d\.]+/YOUR_PACKAGE_NAME_INSTALLER_FILE\.unitypackage"
-        Replace     = "https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY/releases/download/{VERSION}/YOUR_PACKAGE_NAME_INSTALLER_FILE.unitypackage"
+        Pattern     = "https://github\.com/Saesentsessis/unity-shaderworks/releases/download/[\d\.]+/ShaderWorks-Installer\.unitypackage"
+        Replace     = "https://github.com/Saesentsessis/unity-shaderworks/releases/download/{VERSION}/ShaderWorks-Installer.unitypackage"
         Description = "Repository README download URL"
     },
     # Install snippets. Built with [regex]::Escape because the package id / repository contain regex metacharacters ('.').
     @{
-        Path        = "Unity-Package/Assets/root/README.md"
-        Pattern     = [regex]::Escape('"YOUR_PACKAGE_ID_LOWERCASE":') + '\s*"[\d\.]+"'
-        Replace     = '"YOUR_PACKAGE_ID_LOWERCASE": "{VERSION}"'
+        Path        = "unity-shaderworks/Assets/root/README.md"
+        Pattern     = [regex]::Escape('"com.saesentsessis.unity-shaderworks":') + '\s*"[\d\.]+"'
+        Replace     = '"com.saesentsessis.unity-shaderworks": "{VERSION}"'
         Description = "Package README manifest.json example"
     },
     @{
         Path        = "README.md"
-        Pattern     = [regex]::Escape('"YOUR_PACKAGE_ID_LOWERCASE":') + '\s*"[\d\.]+"'
-        Replace     = '"YOUR_PACKAGE_ID_LOWERCASE": "{VERSION}"'
+        Pattern     = [regex]::Escape('"com.saesentsessis.unity-shaderworks":') + '\s*"[\d\.]+"'
+        Replace     = '"com.saesentsessis.unity-shaderworks": "{VERSION}"'
         Description = "Repository README manifest.json example"
     },
     @{
-        Path        = "Unity-Package/Assets/root/README.md"
-        Pattern     = [regex]::Escape("https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY.git?path=Unity-Package/Assets/root#") + '[\d\.]+'
-        Replace     = "https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY.git?path=Unity-Package/Assets/root#{VERSION}"
+        Path        = "unity-shaderworks/Assets/root/README.md"
+        Pattern     = [regex]::Escape("https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#") + '[\d\.]+'
+        Replace     = "https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#{VERSION}"
         Description = "Package README git URL tag"
     },
     @{
         Path        = "README.md"
-        Pattern     = [regex]::Escape("https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY.git?path=Unity-Package/Assets/root#") + '[\d\.]+'
-        Replace     = "https://github.com/YOUR_GITHUB_USERNAME_REPOSITORY.git?path=Unity-Package/Assets/root#{VERSION}"
+        Pattern     = [regex]::Escape("https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#") + '[\d\.]+'
+        Replace     = "https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#{VERSION}"
         Description = "Repository README git URL tag"
     }
 )
@@ -149,7 +149,7 @@ function Test-SemanticVersion {
 
 function Get-CurrentVersion {
     # Extract current version from package.json
-    $packageJsonPath = "Unity-Package/Assets/root/package.json"
+    $packageJsonPath = "unity-shaderworks/Assets/root/package.json"
     if (-not (Test-Path $packageJsonPath)) {
         throw "Could not find package.json at: $packageJsonPath"
     }
