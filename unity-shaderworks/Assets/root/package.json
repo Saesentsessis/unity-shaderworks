@@ -1,0 +1,31 @@
+{
+    "name": "com.saesentsessis.unity-shaderworks",
+    "displayName": "ShaderWorks",
+    "author": {
+        "name": "Saesentsessis",
+        "url": "https://github.com/Saesentsessis"
+    },
+    "keywords": [
+        "Unity",
+        "Shaders",
+        "Shader Variants",
+        "Shader Stripping",
+        "Build",
+        "Editor"
+    ],
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "description": "Editor tools for Unity shaders. Shader variant stripping driven by keyword schemas: Automatic and Custom modes, excluded combinations, a variant count preview and build reports.",
+    "dependencies": {
+        "com.unity.burst": "1.8.25",
+        "com.unity.collections": "2.6.2",
+        "com.unity.mathematics": "1.3.3"
+    },
+    "documentationUrl": "https://github.com/Saesentsessis/unity-shaderworks/blob/main/unity-shaderworks/Assets/root/README.md",
+    "changelogUrl": "https://github.com/Saesentsessis/unity-shaderworks/blob/main/unity-shaderworks/Assets/root/CHANGELOG.md",
+    "licensesUrl": "https://github.com/Saesentsessis/unity-shaderworks/blob/main/unity-shaderworks/Assets/root/LICENSE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Saesentsessis/unity-shaderworks.git"
+    }
+}

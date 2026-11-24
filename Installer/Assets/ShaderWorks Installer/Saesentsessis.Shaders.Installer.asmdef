@@ -1,0 +1,16 @@
+{
+    "name": "Saesentsessis.Shaders.Installer",
+    "rootNamespace": "Saesentsessis.Shaders.Installer",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

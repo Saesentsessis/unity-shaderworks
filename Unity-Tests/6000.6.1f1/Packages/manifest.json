@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "com.saesentsessis.unity-shaderworks": "file:./../../../unity-shaderworks/Assets/root",
+    "com.unity.test-framework": "1.6.0"
+  },
+  "testables": [
+    "com.saesentsessis.unity-shaderworks"
+  ]
+}
