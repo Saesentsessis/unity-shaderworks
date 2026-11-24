@@ -1,7 +1,7 @@
 /*
 ┌────────────────────────────────────────────────────────────────────────────┐
 │  Author: Saesentsessis (https://github.com/Saesentsessis)                  │
-│  Repository: GitHub (https://github.com/Saesentsessis/Unity-Package-Template) │
+│  Repository: GitHub (https://github.com/Saesentsessis/unity-shaderworks)   │
 │  Copyright (c) 2025–2026 Saesentsessis                                     │
 │  Licensed under the MIT License.                                           │
 │  See the LICENSE file in the project root for more information.            │
@@ -28,11 +28,11 @@ namespace Saesentsessis.Shaders.Installer
         public const string Url = "url";
         public const string Scopes = "scopes";
 
-        // Property values
+        // OpenUPM registry and the scopes the installer adds: this repository's packages only
         public const string RegistryName = "package.openupm.com";
         public const string RegistryUrl = "https://package.openupm.com";
         public static readonly string[] PackageIds = new string[] {
-            "com.saesentsessis"          // This package and its Saesentsessis dependencies on OpenUPM
+            "com.saesentsessis.unity-shaderworks"                     // this package
         };
 
         /// <summary>

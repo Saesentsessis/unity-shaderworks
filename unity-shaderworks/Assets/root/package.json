@@ -13,7 +13,7 @@
         "Build",
         "Editor"
     ],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "unity": "2022.3",
     "description": "Editor tools for Unity shaders. Shader variant stripping driven by keyword schemas: Automatic and Custom modes, excluded combinations, a variant count preview and build reports.",
     "dependencies": {

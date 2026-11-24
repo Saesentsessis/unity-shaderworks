@@ -51,7 +51,7 @@ Or add the registry to `Packages/manifest.json` by hand:
 ```json
 {
   "dependencies": {
-    "com.saesentsessis.unity-shaderworks": "0.1.0"
+    "com.saesentsessis.unity-shaderworks": "0.1.1"
   },
   "scopedRegistries": [
     {
@@ -70,7 +70,7 @@ Or add the registry to `Packages/manifest.json` by hand:
 In the Package Manager, **+ > Add package from git URL...**:
 
 ```
-https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#0.1.0
+https://github.com/Saesentsessis/unity-shaderworks.git?path=unity-shaderworks/Assets/root#0.1.1
 ```
 
 ## License

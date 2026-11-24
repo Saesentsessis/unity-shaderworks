@@ -1,30 +1,14 @@
 # ShaderWorks Installer
 
-Editor scripts for this template’s `.unitypackage` installer. At install time they can add OpenUPM scoped registries and the package dependency to the host project’s `manifest.json`.
+Editor scripts of the `ShaderWorks-Installer.unitypackage` installer. When the `.unitypackage` is imported, `Installer` adds the OpenUPM
+scoped registry (`https://package.openupm.com`) with the scopes `com.saesentsessis.unity-shaderworks` to the host project's
+`Packages/manifest.json`, then adds `com.saesentsessis.unity-shaderworks` at `Installer.Version` (it never downgrades a newer version).
+Packages from Unity's registry need no scope.
 
-This file lives under the Installer Unity project, **not** inside the UPM package root (`unity-shaderworks/Assets/root`).
-
-## Template usage
-
-Follow the main guide: [Unity Package Template README](https://github.com/Saesentsessis/Unity-Package-Template/blob/main/README.md).
-
-Per-repository setup:
-
-```powershell
-./commands/init.ps1 -PackageId "com.company.package" -AssemblyName "MyPackage" -PackageName "My Package" -GitHubRepository "YourGitHubUsername/your-repo-name"
-```
-
-Manual rename reference (if needed): [docs/Manual-Package-Rename.md](../../../docs/Manual-Package-Rename.md)
+This project is not the UPM package (`unity-shaderworks/Assets/root`). `SAESENTSESSIS_INSTALLER_PROJECT` (Player settings, scripting define
+symbols) keeps the installer from editing this project's own manifest.
 
 ## CI export
 
-Release CI calls `Saesentsessis.Shaders.Installer.PackageExporter.ExportPackage` via GameCI `unity-builder@v5` to produce `ShaderWorks-Installer.unitypackage`.
-
-## Deploy docs
-
-- [Deploy to OpenUPM](../../../docs/Deploy-OpenUPM.md)
-- [Deploy using GitHub](../../../docs/Deploy-GitHub.md)
-- [Deploy to npmjs.com](../../../docs/Deploy-npmjs.md)
-- [OpenUPM signing](../../../docs/openupm-signing.md)
-
-Based on [Ivan Murzak’s Unity-Package-Template](https://github.com/IvanMurzak/Unity-Package-Template). Maintained by Saesentsessis under MIT.
+The release workflow calls `Saesentsessis.Shaders.Installer.PackageExporter.ExportPackage` through GameCI `unity-builder` to produce
+`ShaderWorks-Installer.unitypackage`. `commands/bump-version.ps1` keeps `Installer.Version` in step with `package.json`.

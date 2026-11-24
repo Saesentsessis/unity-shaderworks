@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1] - 2026-11-24
+
+### Fixed
+
+- The installer `.unitypackage` added the package template's OpenUPM scopes instead of ShaderWorks', so the package it
+  added couldn't be resolved. It now adds exactly `com.saesentsessis.unity-shaderworks`.
+
 ## [0.1.0] - 2026-11-24
 
 ### Added
